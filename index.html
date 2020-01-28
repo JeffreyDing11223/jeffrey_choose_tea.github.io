@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>随机选择奶茶</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="author" content="dingdongjie" />
+<style>
+body{font-size:62.5%;font-family:"Microsoft YaHei",Arial; overflow-x:hidden; overflow-y:auto;}
+.viewport{ max-width:640px; min-width:300px; margin:0 auto;}
+</style>
+
+   <script>
+        function choose() {
+            var items = ['TPlus','LeLe茶','喜茶','一点点','奈雪','小眷村','快乐柠檬','KOI'];
+			var itemsOfTplus = ['冰淇淋红茶 3分糖','冰淇淋厚奶茶 芋圆+3分糖','冰淇淋厚奶茶	仙草+3分糖','英式伯爵厚奶茶	 珍珠+3分糖','冻顶乌龙厚奶茶 珍珠+3分糖','焦糖布丁厚奶茶 3分糖','四季春韵厚奶茶 芋圆+3分糖','芋头圆圆鲜奶茶 3分糖','英式伯爵芝芝盖 3分糖','冻顶乌龙芝芝盖	 3分糖','四季春韵芝芝盖 3分糖','爽口芒果芝芝盖 3分糖'];
+			var itemsOfLeLe = ['草莓酪酪	5分糖','草莓桃子酪酪 3分糖','草莓蓝莓酪酪 3分糖','葡萄酪酪	3分糖','车厘子酪酪 3分糖','金玉茶王酪酪	3分糖','玫珑蜜瓜酪酪 3分糖'];
+			var itemsOfXiCha = ['芝芝桃桃	 3分糖','芝芝莓莓	5分糖','芝芝蓝莓双拼 3分糖','多肉葡萄 3分糖','奶茶波波冰 3分糖','芝芝绿研 3分糖','芝芝金玉 3分糖','芝芝金凤茶王	3分糖','满杯橙橙 3分糖','豆豆波波茶 3分糖'];
+			var itemsOfYidd  = ['波霸奶茶 3分糖','波霸奶茶 冰淇淋+3分糖','四季奶青 冰淇淋+波霸+3分糖','四季奶青	仙草+波霸+3分糖','冰淇淋红茶 3分糖','冰淇淋红茶 波霸+3分糖','乌龙奶茶 波霸+3分糖','乌龙奶茶 冰淇淋+波霸+3分糖','乌龙奶茶 仙草+波霸+3分糖'];
+			var itemsOfNaiXue = ['霸气橙子 3分糖','霸气芝士黑提	 3分糖','霸气芝士莓莓莓 3分糖','霸气芝士草莓	3分糖','维他豆奶宝藏茶	3分糖','芝士阿里山初露 3分糖','芝士玫瑰乌龙 3分糖'];
+			var itemsOfXjc = ['涓豆腐奶茶 芝麻芋圆+3分糖','小眷村奶茶 3分糖','草莓小确幸 3分糖'];
+			var itemsOfKlnm = ['半熟蛋糕珍珠奶茶 3分糖','蛋糕忌廉珍珠奶茶	 3分糖','OREO曲奇奶茶	3分糖','岩盐芝士绿茶 3分糖','岩盐芝士四季春茶	 3分糖','岩盐芝士红茶	3分糖','两瓶养乐多柠檬绿茶 3分糖'];
+			var itemsOfKOI = ['伯爵珍奶 3分糖','芋圆伯爵奶茶 4分糖','鲜芒果绿 珍珠+5分糖','锡兰芋圆红茶'];
+			var item = items[Math.floor(Math.random()*items.length)];
+			var item2
+			switch (item) {
+				case 'TPlus':
+					item2 = itemsOfTplus[Math.floor(Math.random()*itemsOfTplus.length)];
+					break;
+				case 'LeLe茶':
+					item2 = itemsOfLeLe[Math.floor(Math.random()*itemsOfLeLe.length)];
+					break;
+				case '喜茶':
+					item2 = itemsOfXiCha[Math.floor(Math.random()*itemsOfXiCha.length)];
+					break;
+				case '一点点':
+					item2 = itemsOfYidd[Math.floor(Math.random()*itemsOfYidd.length)];
+					break;
+				case '奈雪':
+					item2 = itemsOfNaiXue[Math.floor(Math.random()*itemsOfNaiXue.length)];
+					break;
+				case '小眷村':
+					item2 = itemsOfXjc[Math.floor(Math.random()*itemsOfXjc.length)];
+					break;
+				case '快乐柠檬':
+					item2 = itemsOfKlnm[Math.floor(Math.random()*itemsOfKlnm.length)];
+					break;
+				case 'KOI':
+					item2 = itemsOfKOI[Math.floor(Math.random()*itemsOfKOI.length)];
+					break;
+			}
+			document.getElementById("tea111").value=item
+			document.getElementById("tea222").value=item2
+        }
+    </script>
+</head>
+
+<body>
+<div>
+奶茶选择如下：<br><br>
+店名
+<input type="text" id="tea111" size="10" maxlength="30" value="请先按按钮">
+奶茶名
+<input type="text" id="tea222" size="25" maxlength="75" value="请先按按钮">
+<button onclick="choose()">立刻选择奶茶</button><br><br><br>
+希望你能喜欢，如需添加删除or修改，请联系丁东杰
+</div>
+</body>
+</html>
